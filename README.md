@@ -202,17 +202,21 @@ SQL techniques used include:
 selct sum(sale_price)
   from real estate ;
 this tell the total sale price
-
-
-
+.......................................
 
 SELECT
     locality,
-    COUNT(*) AS total_transactions,
-    AVG(sale_price) AS average_sale_price
-FROM properties
+    COUNT(*) AS transactions,
+    ROUND(AVG(sale_price), 2) AS average_sale_price,
+    ROUND(AVG(price_per_sqft), 2) AS average_price_per_sqft
+FROM real_estate_properties
 GROUP BY locality
 ORDER BY average_sale_price DESC;
+
+this gives you total locality transaction, avg sale  price and avg price per.sq.ft
+
+
+   
 ```
 
 This identifies localities with the highest average transaction prices.
