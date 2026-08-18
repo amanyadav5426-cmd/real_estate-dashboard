@@ -199,6 +199,13 @@ SQL techniques used include:
 ### Example Business Query
 
 ```sql
+selct sum(sale_price)
+  from real estate ;
+this tell the total sale price
+
+
+
+
 SELECT
     locality,
     COUNT(*) AS total_transactions,
